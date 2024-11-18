@@ -1,0 +1,125 @@
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1f1f2e; /* O singură nuanță elegantă de albastru închis */
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  animation: fadeIn 0.8s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 2.2em;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+input[type="number"],
+button {
+  width: 85%;
+  padding: 14px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"] {
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+}
+
+input[type="number"]:focus {
+  background: #ffffff;
+  color: #5d5c61;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+button {
+  background: linear-gradient(135deg, #6c5ce7, #4b47d0);
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover,
+button:focus {
+  background: linear-gradient(135deg, #4834d4, #3c30c0);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+#output {
+  margin-top: 25px;
+  font-size: 1.3em;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInOutput 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeInOutput {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
